@@ -8,7 +8,7 @@ def solution(x: np.array, y: np.array) -> bool:
     alpha=0.03
     statistic1, pvalue1 = shapiro(x)
     statistic2, pvalue2 = shapiro(y)
-    stat, p = mannwhitneyu(x, y, alternative='two-sided')
+    
     if pvalue1 < alpha or pvalue2 < alpha:
         return True
     else:
